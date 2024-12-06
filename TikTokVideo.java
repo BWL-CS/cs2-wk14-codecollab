@@ -1,12 +1,12 @@
 public class TikTokVideo {
 
-	// *** INSTANCE VARIABLES ***
+	// *** 1. INSTANCE VARIABLES ***
 	private String title;
 	private double duration;
 	private int views;
 	private static int totalVideos = 0;
 
-	// *** CONSTRUCTOR ***
+	// *** 2. CONSTRUCTORS ***
 	public TikTokVideo(String title, double duration) {
 		this.title = title;
 		this.duration = duration;
@@ -14,9 +14,13 @@ public class TikTokVideo {
 		totalVideos++;
 	}
 
-  // *** METHODS ***
+  	// *** 3. METHODS ***
 
-	// Getters
+	// Getter Methods
+
+	public String toString() {
+		return "TikTokVideo[title=" + title + ", duration=" + duration + ", views=" + views + "]";
+	}
 
 	public String getTitle() {
 		return title;
@@ -30,7 +34,7 @@ public class TikTokVideo {
 		return duration;
 	}
 
-	// Setters
+	// Setter Methods
 
 	public void setTitle(String title) {
 		this.title = title;
@@ -48,13 +52,9 @@ public class TikTokVideo {
 		}
 	}
 
-	// Other behaviors
-  
-  public String toString() {
-		return "TikTokVideo[title=" + title + ", duration=" + duration + ", views=" + views + "]";
-	}
+	// Behavior Methods
 
-  public static int getTotalVideos() {
+	public static int getTotalVideos() {
 		return totalVideos;
 	}
   
